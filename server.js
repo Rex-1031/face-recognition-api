@@ -28,7 +28,7 @@ app.use(cors())
 
 
 
-app.get('/', (req, res)=>{res.send(database.users)})
+app.get('/', (req, res)=>{res.send('GET is operational')})
 app.post('/register', register.handleRegister(db,bcrypt))
 app.get('/profile/:id', profile.handleProfileGet(db))
 app.post('/signin', signin.handleSignin(db, bcrypt))
