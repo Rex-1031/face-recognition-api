@@ -35,7 +35,7 @@ app.post('/signin', signin.handleSignin(db, bcrypt))
 app.put('/image', image.handleImage(db))
 app.post('/imageurl', (req,res)=>image.handleAPICall(req,res))
 
-app.listen(PORT, ()=>{
+app.listen(PORT || 3000, ()=>{
     console.log(`Running on PORT ${PORT}`)
 })
 
